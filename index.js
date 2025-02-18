@@ -15,3 +15,13 @@ function validatePassword(pswd1, pswd2) {
 
     return false
 }
+
+function reversePassword(pswd) {
+    var reversed = "";
+
+    for (let i = pswd.length - 1; i > -1; i--) {
+        reversed = reversed.concat(pswd[i])
+    }
+
+    return reversed
+}
