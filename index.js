@@ -25,3 +25,13 @@ function reversePassword(pswd) {
 
     return reversed
 }
+
+function storePassword(name, pswd1, pswd2) {
+    const user = { name: name, newpassword: pswd1 }
+
+    if (validatePassword(pswd1, pswd2)) {
+        user.newpassword = reversePassword(pswd1)
+    }
+
+    return user
+}
